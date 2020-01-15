@@ -1,0 +1,32 @@
+@import 'global.less';
+// @import '~@/global.less';
+// @import '~abc.less';
+
+
+.LoginWrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  .wh(100%, 100vh);
+  .bgColor(@baseBackgroundColor);
+  .flex;
+  justify-content: center;
+
+  .LoginConWrap {
+    position: absolute;
+    top: 22%;
+    .w(368px);
+    padding: 30px 0;
+
+    .LogoWrap {
+      .flex;
+      justify-content: center;
+      padding-bottom: 20px;
+
+      &>img {
+        display: block;
+        .wh(231px, 60px);
+      }
+    }
+  }
+}
