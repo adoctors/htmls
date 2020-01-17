@@ -18,8 +18,7 @@ const config: IConfig = {
 
   /** 非根目录打包*/
   // base: '/dist',
-  // history: 'hash',
-  // publicPath: '/dist/',
+  history: 'hash',
   /** 非根目录打包*/
   exportStatic: {
     dynamicRoot: true,
