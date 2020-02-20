@@ -3,10 +3,10 @@ import { connect } from 'dva';
 import Link from 'umi/link';
 import { Avatar, Menu, Dropdown, Icon } from 'antd';
 import styles from './Header.less';
-import logo from '@/assets/dt_logo.png';
+import logo from '@/assets/logo-b.png';
 
 const Header = props => {
-  const userName = 'test';
+  const userName = 'adoctors';
 
   const menu = (
     <Menu>
