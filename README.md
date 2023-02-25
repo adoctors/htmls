@@ -1,2 +1,1 @@
-# htmls
-static HTML pages
+静态资源
