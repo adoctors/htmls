@@ -6,4 +6,5 @@ export default defineConfig({
   },
   exportStatic: false,
   base: '/htmls',
+  publicPath: '/htmls',
 });
