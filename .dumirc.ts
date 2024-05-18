@@ -1,10 +1,11 @@
-import { defineConfig } from 'dumi';
+import { defineConfig } from "dumi";
 
 export default defineConfig({
   themeConfig: {
-    name: 'kl_doc',
+    name: "kl_doc",
   },
   exportStatic: false,
-  base: '/htmls',
-  publicPath: '/htmls/'
+  base: "/htmls",
+  publicPath: "/htmls/",
+  history: { type: "hash" },
 });
