@@ -48,13 +48,11 @@ jobs:
           git fetch
           git config --global user.name "adoctors"
           git config --global user.email "qkeliang@163.com"
-          git status
-          ls
           git checkout master
-          git status ls
+          git rm -rf .
+          mv dist/* .
           git add .
           git commit -m "Update docs"
-          git pull origin master
           echo "commit success!"
 
       - name: Push changes
