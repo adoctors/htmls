@@ -1,2 +1,0 @@
-# htmls
-static HTML pages
