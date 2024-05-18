@@ -45,6 +45,7 @@ jobs:
 
       - name: Commit
         run: |
+          git fetch
           git config --global user.name "adoctors"
           git config --global user.email "qkeliang@163.com"
           git status
@@ -53,6 +54,7 @@ jobs:
           git status ls
           git add .
           git commit -m "Update docs"
+          git pull origin master
           echo "commit success!"
 
       - name: Push changes
