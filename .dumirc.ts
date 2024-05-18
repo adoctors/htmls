@@ -5,4 +5,5 @@ export default defineConfig({
     name: 'kl_doc',
   },
   exportStatic: false,
+  base: '/htmls',
 });
