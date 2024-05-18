@@ -43,10 +43,15 @@ jobs:
           name: docs
           path: dist
 
-      - name: Commit and push changes
+      - name: Commit
         run: |
           git config --global user.name "adoctors"
           git config --global user.email "qkeliang@163.com"
           git add .
           git commit -m "Update docs"
-          git push origin master
+          echo "commit success!"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
