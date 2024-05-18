@@ -34,19 +34,19 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout master
-        uses: actions/checkout@v2
-        with:
-          red: master   # 切换到master分支
-
       - name: Clear master
         run: |
           git fetch
           git config --global user.name "adoctors"
           git config --global user.email "qkeliang@163.com"
+          git checkout master
           git rm -rf .
+          git add .
 
-      - name: Download dist     # 清空master分支后将dist文件下载到master
+      - name: Checkout code
+        uses: actions/checkout@v2  # 从默认分支浅拷贝一份代码进行操作
+
+      - name: Download dist # 清空master分支后将dist文件下载到master
         uses: actions/download-artifact@v2
         with:
           name: docs
@@ -54,6 +54,7 @@ jobs:
 
       - name: Move dist to root and commit
         run: |
+          git checkout master
           mv dist/* .
           rm -rf dist
           git add .
