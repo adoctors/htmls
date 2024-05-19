@@ -56,6 +56,7 @@ jobs:
           git config --global user.name "adoctors"
           git config --global user.email "qkeliang@163.com"
           git checkout master
+          rm -rf docs
           mv dist docs
           git add .
           git commit -m "Update docs"
