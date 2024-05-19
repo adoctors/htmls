@@ -23,6 +23,11 @@ jobs:
 
       - name: Build
         run: npm run build
+      
+      - name: Del demos
+        run: |
+          cd dist
+          rm -rf ./~demos
 
       - name: Deploy
         uses: actions/upload-artifact@v2
